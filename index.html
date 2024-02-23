@@ -21,16 +21,27 @@
      </style>
 </head>
 <body>
-    <section id="arithmetic">
-        <h2>Arithmetic</h2>
-        <div>
-        <input id="num1" name="num1" required>
-        <label>+</label>
-        <input  id="num2" name="num2" required>
-        <button type="button" onclick="add()">=</button>
-        <label id="result"></label>
+    <div class="row">
+        <div class="column">          
+           <section>
+            <h2>Arithmetic</h2>
+            <input id="operand1"/> 
+            <label>+</label>
+            <input id="operand2"/>
+            <button onclick="add()">=</button>
+            <label id="sum"></label>  
+        </section>
         </div>
-    </section>
+        <div class="column">
+            <section>
+                <h2>Prime check</h2>                
+                <label>Number to test:</label>
+                <input id="numberToTest"/>
+                <button onclick="isPrime()">Check</button>
+                <label id="primeCheckResult"></label>  
+            </section>           
+        </div>       
+     </div>
     <script>
         async function add(){
             const input1 = document.getElementById('num1');
