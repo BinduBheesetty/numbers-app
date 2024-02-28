@@ -39,8 +39,17 @@
                 <button onclick="isPrime()">Check</button>
                 <label id="primeCheckResult"></label>  
             </section>           
-        </div>       
-     </div>
+        </div>
+        <div class="column">
+            <section>
+                <h2>Caesar Cipher</h2>
+                <label>Text:</label>
+                <input id="text"/>
+                <button onclick="isPrime()">Cipher</button>
+                <label id="cipherText"></label>
+            </section>
+        </div>
+    </div>
     
    
     <script>
@@ -60,6 +69,14 @@
             const response = await fetch("https://primes-service-latest-88x1.onrender.com/primes/" + n);
             const result = await response.json();
             document.getElementById("primeCheckResult").innerText = result;
+        }
+
+        async function encodeCaesarCipher() {
+            const text = document.getElementById("text");
+            let n = text.value;
+            const response = await fetch("" + n);
+            const encoded = await response.json();
+            document.getElementById("cipherText").innerText = encoded;
         }
     </script>
 </body>
