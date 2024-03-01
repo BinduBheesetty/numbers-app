@@ -76,7 +76,7 @@
             let n = text.value;
             const response = await fetch("https://ciphers-service-latest-hohv.onrender.com/ciphers/caesar/" + n + "/3");
             const encoded = await response.json();
-            document.getElementById("cipherText").innerText = encoded;
+            document.getElementById("cipherText").innerText = encoded.cipher;
         }
     </script>
 </body>
